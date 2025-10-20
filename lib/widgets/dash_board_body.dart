@@ -9,8 +9,10 @@ class DashBoardBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveLayoutWidget(
-      mobileLayout: (context) => SizedBox(),
-      tabletLayout: (context) => SizedBox(),
+      mobileLayout: (context) =>
+          SizedBox(child: Text("I 'm Amira Nasser I am Developing Sth")),
+      tabletLayout: (context) =>
+          SizedBox(child: Text("I 'm Amira Nasser I am Developing Sth")),
       desktopLayout: (context) => DesktopDashBoard(),
     );
   }
