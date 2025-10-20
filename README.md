@@ -22,3 +22,16 @@ Measures the size of the largest child and adjusts the parent’s height or widt
 ### MediaQuery vs LayoutBuilder
 - MediaQuery returns the actual size of the entire screen.
 - LayoutBuilder returns the size of its parent widget’s constraints.
+
+## Responsive Text Sizing
+To ensure font sizes adapt smoothly across devices, use the following approach:
+
+### 🔧 Key Concepts
+- Base Font Size: The original font size used as a reference.
+- Scale Factor: Adjusts font size based on device width.
+    - Formula: `Scale Factor = currentWidth / widthPlatform` (where widthPlatform is the breakpoint width for Desktop, Tablet, or Mobile)
+- Responsive Font Size: `Responsive Font Size = Base Font Size × Scale Factor`
+- Limits
+    - Lower Limit: `Lower Limit = Base Font Size × 0.8`
+    - Upper Limit: `Upper Limit = Base Font Size × 1.2`
+- Clamp the responsive size between the limits: Final Font Size = clamp(Lower Limit, Responsive Font Size, Upper Limit)
