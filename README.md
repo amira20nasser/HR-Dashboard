@@ -18,3 +18,7 @@ FittedBox takes a child widget and resizes it to fit within the space given by i
 Maintains a specific width-to-height ratio for its child. Useful for consistent sizing across devices.
 ### IntrinsicHeight / IntrinsicWidth
 Measures the size of the largest child and adjusts the parent’s height or width accordingly.
+
+### MediaQuery vs LayoutBuilder
+- MediaQuery returns the actual size of the entire screen.
+- LayoutBuilder returns the size of its parent widget’s constraints.
