@@ -10,9 +10,9 @@ class DesktopLayout extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          SizedBox(width: 250, child: CustomDrawer()),
+          Expanded(flex: 1, child: CustomDrawer()),
           SizedBox(width: 50),
-          Expanded(child: DesktopLayoutBlocBuilder()),
+          Expanded(flex: 6, child: DesktopLayoutBlocBuilder()),
         ],
       ),
     );

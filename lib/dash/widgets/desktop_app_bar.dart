@@ -10,7 +10,10 @@ class DesktopAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [FakeSearchWidget(), AppBarActions()],
+      children: [
+        FakeSearchWidget(),
+        Expanded(child: AppBarActions()),
+      ],
     );
   }
 }

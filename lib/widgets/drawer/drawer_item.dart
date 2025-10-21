@@ -28,9 +28,13 @@ class DrawerItem extends StatelessWidget {
         ),
         // widget.icon,
         SizedBox(width: 24),
-        !showTitle
-            ? SizedBox()
-            : Text(
+        if (!showTitle)
+          SizedBox()
+        else
+          Flexible(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
                 dashBoardEntity.title,
                 style: AppStyles.styleRegular16(context).copyWith(
                   color: isSelected
@@ -39,6 +43,9 @@ class DrawerItem extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
+            ),
+          ),
+        SizedBox(width: 5),
       ],
     );
   }
