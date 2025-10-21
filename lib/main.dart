@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'router/app_router.dart';
 import 'utils/app_theme.dart';
-import 'views/dash_board_view.dart';
 
 void main() {
   runApp(const HrDashboardApp());
@@ -12,10 +12,11 @@ class HrDashboardApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      title: 'WeHR Dashboard',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: DashBoardView(),
+      routerConfig: appRouter,
     );
   }
 }

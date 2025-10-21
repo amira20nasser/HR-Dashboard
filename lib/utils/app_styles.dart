@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
@@ -7,6 +9,11 @@ abstract class AppStyles {
     fontSize: _getResponsiveFontSize(context, baseFontSize: 36),
     fontWeight: FontWeight.w500,
     color: AppColors.tertiaryColor,
+  );
+  static TextStyle styleSemiBold36(BuildContext context) => TextStyle(
+    fontSize: _getResponsiveFontSize(context, baseFontSize: 36),
+    fontWeight: FontWeight.w600,
+    color: AppColors.black,
   );
   static TextStyle styleMedium48(BuildContext context) => TextStyle(
     fontSize: _getResponsiveFontSize(context, baseFontSize: 48),
@@ -63,7 +70,7 @@ abstract class AppStyles {
     double responsiveFontSize = baseFontSize * scaleFactor;
     double lowerLimit = baseFontSize * .8;
     double upperLimit = baseFontSize * 1.2;
-    print(
+    log(
       "fontsize $baseFontSize scaleFactor $scaleFactor LowerLimit $lowerLimit upperLimit $upperLimit ,responsiveFontSize $responsiveFontSize ",
     );
     return responsiveFontSize.clamp(lowerLimit, upperLimit);
