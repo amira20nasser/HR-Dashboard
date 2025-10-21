@@ -15,6 +15,7 @@ class DrawerBodyListView extends StatelessWidget {
 
     return ListView.builder(
       physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
       itemCount: items.length,
       itemBuilder: (context, index) {
         var dashBoardItem = items[index];

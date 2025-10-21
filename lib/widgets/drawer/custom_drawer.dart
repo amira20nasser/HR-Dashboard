@@ -10,19 +10,20 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: double.infinity,
       color: AppColors.drawerColor,
-      child: Column(
-        children: [
-          DrawerHeader(
-            child: Text("WeHR", style: AppStyles.styleSemiBold36(context)),
-          ),
-          Expanded(
-            child: Padding(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 30),
+            Text("WeHR", style: AppStyles.styleSemiBold36(context)),
+            SizedBox(height: 50),
+            Padding(
               padding: const EdgeInsets.only(left: 30.0),
               child: DrawerBody(),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

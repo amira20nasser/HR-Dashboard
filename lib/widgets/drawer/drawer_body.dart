@@ -46,16 +46,9 @@ class DrawerBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(
-          child: DrawerBodySection(
-            items: mainMenuItems,
-            sectionName: 'MAIN MENU',
-          ),
-        ),
+        DrawerBodySection(items: mainMenuItems, sectionName: 'MAIN MENU'),
         SizedBox(height: 50),
-        Expanded(
-          child: DrawerBodySection(items: othersItems, sectionName: 'OTHERS'),
-        ),
+        DrawerBodySection(items: othersItems, sectionName: 'OTHERS'),
       ],
     );
   }

@@ -11,8 +11,7 @@ class DesktopLayout extends StatelessWidget {
       body: Row(
         children: [
           SizedBox(width: 250, child: CustomDrawer()),
-
-          // state management to determine which body to view
+          SizedBox(width: 50),
           Expanded(child: DesktopLayoutBlocBuilder()),
         ],
       ),

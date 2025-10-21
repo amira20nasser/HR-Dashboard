@@ -38,6 +38,11 @@ abstract class AppStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.secondaryTitleColor,
   );
+  static TextStyle styleMedium16(BuildContext context) => TextStyle(
+    fontSize: _getResponsiveFontSize(context, baseFontSize: 16),
+    fontWeight: FontWeight.w500,
+    color: AppColors.tertiaryColor,
+  );
   static TextStyle styleMedium14(BuildContext context) => TextStyle(
     fontSize: _getResponsiveFontSize(context, baseFontSize: 14),
     fontWeight: FontWeight.w500,

@@ -25,7 +25,7 @@ class DrawerBodySection extends StatelessWidget {
           ).copyWith(fontFamily: GoogleFonts.roboto().fontFamily),
         ),
         SizedBox(height: 16),
-        Expanded(child: DrawerBodyListView(items: items)),
+        DrawerBodyListView(items: items),
       ],
     );
   }
