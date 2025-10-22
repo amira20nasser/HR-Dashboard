@@ -13,3 +13,5 @@ class DepartmentViewState extends ViewManagerState {}
 class SupportViewState extends ViewManagerState {}
 
 class SettingsViewState extends ViewManagerState {}
+
+class ScheduleViewState extends ViewManagerState {}

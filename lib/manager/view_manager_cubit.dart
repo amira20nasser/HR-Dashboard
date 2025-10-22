@@ -37,6 +37,10 @@ class ViewManagerCubit extends Cubit<ViewManagerState> {
         currentView = Views.support;
         emit(SupportViewState());
         break;
+      case Views.schedule:
+        currentView = Views.schedule;
+
+        emit(ScheduleViewState());
     }
   }
 }

@@ -26,6 +26,9 @@ class DesktopLayoutBlocBuilder extends StatelessWidget {
         if (state is SettingsViewState) {
           return Text("Desktop SettingsViewState Body");
         }
+        if (state is ScheduleViewState) {
+          return Text("Desktop ScheduleViewState Body");
+        }
         return DesktopDashBoardBody();
       },
     );

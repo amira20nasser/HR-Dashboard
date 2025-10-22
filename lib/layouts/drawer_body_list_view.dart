@@ -33,7 +33,7 @@ class DrawerBodyListView extends StatelessWidget {
                 onTap: () {
                   viewManagerCubit.changeView(dashBoardItem.view);
                 },
-                child: DrawerItem(
+                child: DesktopDrawerItem(
                   dashBoardEntity: dashBoardItem,
                   isSelected: isSelected,
                 ),

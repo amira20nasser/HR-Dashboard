@@ -5,6 +5,6 @@ class TabletDashBoardBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Tablet Dash Board body");
+    return Row(children: [Text("TABLET BODY DashBoard")]);
   }
 }

@@ -18,6 +18,11 @@ class DrawerBody extends StatelessWidget {
       view: Views.recruitment,
     ),
     DrawerEntity(
+      title: "Schedule",
+      assetSvgName: Assets.imagesSchedule,
+      view: Views.schedule,
+    ),
+    DrawerEntity(
       title: "Employee",
       assetSvgName: Assets.imagesEmployee,
       view: Views.employee,

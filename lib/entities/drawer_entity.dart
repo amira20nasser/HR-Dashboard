@@ -1,4 +1,12 @@
-enum Views { dashBoard, recruitment, settings, support, department, employee }
+enum Views {
+  dashBoard,
+  recruitment,
+  settings,
+  support,
+  department,
+  employee,
+  schedule,
+}
 
 class DrawerEntity {
   final String assetSvgName;
