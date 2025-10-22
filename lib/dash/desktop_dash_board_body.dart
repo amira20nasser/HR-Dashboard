@@ -7,12 +7,11 @@ class DesktopDashBoardBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: 23),
-        DesktopAppBar(),
-        SizedBox(height: 35),
-        Expanded(child: DesktopDashboardContent()),
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(child: SizedBox(height: 23)),
+        SliverToBoxAdapter(child: DesktopAppBar()),
+        SliverToBoxAdapter(child: DesktopDashboardContent()),
       ],
     );
   }

@@ -13,7 +13,7 @@ class StatisticsInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(title, style: AppStyles.styleMedium18(context)),
-        const SizedBox(height: 10),
+        const SizedBox(height: 5),
         Text(number, style: AppStyles.styleMedium48(context)),
       ],
     );

@@ -83,9 +83,9 @@ abstract class AppStyles {
     double width = MediaQuery.sizeOf(context).width;
     if (width < 600) {
       return width / 600;
-    } else if (width < 900) {
-      return width / 900;
+    } else if (width < 1300) {
+      return width / 1300;
     }
-    return width / 2000;
+    return width / 1800;
   }
 }

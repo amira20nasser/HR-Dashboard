@@ -8,9 +8,13 @@ class DesktopDashboardContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(flex: 5, child: DashBoardAndAnnouncementSection()),
-        Expanded(flex: 4, child: ActivityAndScheduleSection()),
+        Expanded(flex: 8, child: DashBoardAndAnnouncementSection()),
+        SizedBox(width: 30),
+
+        Expanded(flex: 5, child: ActivityAndScheduleSection()),
+        SizedBox(width: 30),
       ],
     );
   }

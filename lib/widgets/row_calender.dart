@@ -22,12 +22,13 @@ class RowCalender extends StatelessWidget {
         children: [
           Text(
             "Today, 13 Sep 2021",
+            overflow: TextOverflow.ellipsis,
             style: AppStyles.styleRegular12(
               context,
             ).copyWith(fontFamily: GoogleFonts.roboto().fontFamily),
           ),
           SizedBox(width: 8),
-          SvgPicture.asset(Assets.imagesArrowDown),
+          SvgPicture.asset(Assets.imagesArrowDown, width: 8),
         ],
       ),
     );

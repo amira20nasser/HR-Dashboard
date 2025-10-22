@@ -21,7 +21,7 @@ class StatisticsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: AppColors.borderColor),
@@ -35,7 +35,7 @@ class StatisticsCard extends StatelessWidget {
               StatisticsInfo(title: title, number: number),
               Flexible(
                 child: AspectRatio(
-                  aspectRatio: 2 / 1,
+                  aspectRatio: 8 / 3,
                   child: Stack(
                     clipBehavior: Clip.none,
                     children: [
@@ -51,12 +51,12 @@ class StatisticsCard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GenderStats(men: men, women: women),
-              GrowthChip(label: label),
+              Flexible(child: GrowthChip(label: label)),
             ],
           ),
         ],

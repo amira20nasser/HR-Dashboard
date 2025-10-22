@@ -7,12 +7,14 @@ class DashBoardAndAnnouncementSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
+    return Column(
       // crossAxisAlignment: CrossAxisAlignment.start,
-      slivers: [
-        SliverToBoxAdapter(child: DashBoardSection()),
-        SliverToBoxAdapter(child: SizedBox(height: 16)),
-        SliverToBoxAdapter(child: AnnouncementSection()),
+      children: [
+        SizedBox(height: 35),
+        DashBoardSection(),
+        SizedBox(height: 16),
+        AnnouncementSection(),
+        SizedBox(height: 10),
       ],
     );
   }
