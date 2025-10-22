@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'announcement_section.dart';
 import 'dash_board_section.dart';
 
 class DashBoardAndAnnouncementSection extends StatelessWidget {
@@ -6,12 +7,12 @@ class DashBoardAndAnnouncementSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        DashBoardSection(),
-        SizedBox(height: 16),
-        // Future: AnnouncementSection(),
+    return CustomScrollView(
+      // crossAxisAlignment: CrossAxisAlignment.start,
+      slivers: [
+        SliverToBoxAdapter(child: DashBoardSection()),
+        SliverToBoxAdapter(child: SizedBox(height: 16)),
+        SliverToBoxAdapter(child: AnnouncementSection()),
       ],
     );
   }

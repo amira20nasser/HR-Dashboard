@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
@@ -75,9 +73,9 @@ abstract class AppStyles {
     double responsiveFontSize = baseFontSize * scaleFactor;
     double lowerLimit = baseFontSize * .8;
     double upperLimit = baseFontSize * 1.2;
-    log(
-      "fontsize $baseFontSize scaleFactor $scaleFactor LowerLimit $lowerLimit upperLimit $upperLimit ,responsiveFontSize $responsiveFontSize ",
-    );
+    // log(
+    //   "fontsize $baseFontSize scaleFactor $scaleFactor LowerLimit $lowerLimit upperLimit $upperLimit ,responsiveFontSize $responsiveFontSize ",
+    // );
     return responsiveFontSize.clamp(lowerLimit, upperLimit);
   }
 

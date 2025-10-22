@@ -1,13 +1,13 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../layouts/drawer_entity.dart';
+import '../entities/drawer_entity.dart';
 
 part 'view_manager_state.dart';
 
 class ViewManagerCubit extends Cubit<ViewManagerState> {
   ViewManagerCubit() : super(DashBoardViewState());
   Views currentView = Views.dashBoard;
-  changeView(Views view) {
+  void changeView(Views view) {
     switch (view) {
       case Views.dashBoard:
         currentView = Views.dashBoard;

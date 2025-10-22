@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../utils/app_styles.dart';
 import 'drawer_body_list_view.dart';
-import 'drawer_entity.dart';
+import '../entities/drawer_entity.dart';
 
 class DrawerBodySection extends StatelessWidget {
   const DrawerBodySection({

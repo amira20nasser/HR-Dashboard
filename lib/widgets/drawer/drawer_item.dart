@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../layouts/drawer_entity.dart';
+import '../../entities/drawer_entity.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_styles.dart';
 

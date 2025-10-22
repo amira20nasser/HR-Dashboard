@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../layouts/drawer_body_section.dart';
-import '../../layouts/drawer_entity.dart';
+import '../../entities/drawer_entity.dart';
 import '../../utils/app_images.dart';
 
 class DrawerBody extends StatelessWidget {

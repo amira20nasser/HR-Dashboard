@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../manager/view_manager_cubit.dart';
 import '../widgets/drawer/drawer_item.dart';
-import 'drawer_entity.dart';
+import '../entities/drawer_entity.dart';
 
 class DrawerBodyListView extends StatelessWidget {
   const DrawerBodyListView({super.key, required this.items});

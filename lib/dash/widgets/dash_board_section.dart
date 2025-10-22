@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../utils/app_styles.dart';
 import 'dashboard_stats_top_row.dart';
-import 'desktop_dashboard_content.dart';
 import 'stat_row.dart';
 
 class DashBoardSection extends StatelessWidget {

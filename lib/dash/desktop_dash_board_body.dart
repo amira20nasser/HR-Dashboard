@@ -12,7 +12,7 @@ class DesktopDashBoardBody extends StatelessWidget {
         SizedBox(height: 23),
         DesktopAppBar(),
         SizedBox(height: 35),
-        DesktopDashboardContent(),
+        Expanded(child: DesktopDashboardContent()),
       ],
     );
   }
