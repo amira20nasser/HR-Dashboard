@@ -12,7 +12,7 @@ class DesktopAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         FakeSearchWidget(),
-        Expanded(child: AppBarActions()),
+        Expanded(child: AppBarActions(isDestop: true)),
       ],
     );
   }

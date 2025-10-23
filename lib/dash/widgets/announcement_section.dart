@@ -31,7 +31,7 @@ class AnnouncementSection extends StatelessWidget {
         border: Border.all(color: AppColors.borderColor),
       ),
       child: Column(
-        // crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.all(16.0),
@@ -42,13 +42,15 @@ class AnnouncementSection extends StatelessWidget {
             child: AnnouncementsListView(announcements: announcements),
           ),
           Divider(color: AppColors.borderColor),
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              "See All Announcement",
-              style: AppStyles.styleMedium14(
-                context,
-              ).copyWith(color: AppColors.primaryColor),
+          Center(
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                "See All Announcement",
+                style: AppStyles.styleMedium14(
+                  context,
+                ).copyWith(color: AppColors.primaryColor),
+              ),
             ),
           ),
         ],

@@ -7,6 +7,7 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     useMaterial3: true,
+    appBarTheme: AppBarTheme(backgroundColor: Colors.transparent, elevation: 0),
     primaryColor: AppColors.primaryColor,
     scaffoldBackgroundColor: AppColors.lighBackgroundColor,
     textTheme: GoogleFonts.poppinsTextTheme(),

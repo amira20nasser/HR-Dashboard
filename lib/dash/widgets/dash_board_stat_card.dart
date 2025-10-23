@@ -10,16 +10,18 @@ class DashboardStatCard extends StatelessWidget {
     required this.title,
     required this.number,
     required this.note,
+    this.width,
   });
 
   final Color color, noteColor;
   final String title, number, note;
-
+  final double? width;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsets.only(right: 8),
+      width: width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: color,

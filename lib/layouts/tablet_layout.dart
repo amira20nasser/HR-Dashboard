@@ -52,7 +52,7 @@ class TabletAppBar extends StatelessWidget {
         Icon(Icons.menu),
         SizedBox(width: 12),
         FakeSearchWidget(height: 36, width: 245),
-        Expanded(child: AppBarActions()),
+        Expanded(child: AppBarActions(isDestop: false)),
       ],
     );
   }
