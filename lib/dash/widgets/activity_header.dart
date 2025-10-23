@@ -7,7 +7,7 @@ class ActivityHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 10, bottom: 10, left: 24),
+      padding: EdgeInsets.only(top: 10, bottom: 10, left: 24, right: 24),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(10),
@@ -15,15 +15,17 @@ class ActivityHeader extends StatelessWidget {
         ),
         color: Color.fromARGB(27, 32, 74, 170),
       ),
-      child: Row(
-        children: [
-          Text(
-            "Recently Activity",
-            style: AppStyles.styleMedium18(
-              context,
-            ).copyWith(color: Colors.white),
-          ),
-        ],
+      child: FittedBox(
+        child: Row(
+          children: [
+            Text(
+              "Recently Activity",
+              style: AppStyles.styleMedium18(
+                context,
+              ).copyWith(color: Colors.white),
+            ),
+          ],
+        ),
       ),
     );
   }

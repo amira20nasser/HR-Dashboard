@@ -7,6 +7,8 @@ import '../manager/view_manager_cubit.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_images.dart';
 import '../utils/app_styles.dart' show AppStyles;
+import '../widgets/app_bar_actions.dart';
+import '../widgets/fake_search_widget.dart';
 import '../widgets/tablet_layout_bloc_builder.dart';
 
 class TabletLayout extends StatelessWidget {
@@ -16,12 +18,42 @@ class TabletLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(width: 120, child: TabletDrawer()),
-          SizedBox(width: 50),
-          Expanded(flex: 7, child: TabletLayoutBlocBuilder()),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 12),
+              child: Column(
+                children: [
+                  TabletAppBar(),
+                  SizedBox(height: 12),
+                  Divider(),
+                  Expanded(child: TabletLayoutBlocBuilder()),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
+    );
+  }
+}
+
+class TabletAppBar extends StatelessWidget {
+  const TabletAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        SizedBox(width: 12),
+        Icon(Icons.menu),
+        SizedBox(width: 12),
+        FakeSearchWidget(height: 36, width: 245),
+        Expanded(child: AppBarActions()),
+      ],
     );
   }
 }
@@ -31,17 +63,19 @@ class TabletDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: AppColors.drawerColor,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-        child: Column(
-          children: [
-            SizedBox(height: 30),
-            Text("WeHR", style: AppStyles.styleSemiBold36(context)),
-            SizedBox(height: 50),
-            TabletDrawerBody(),
-          ],
+    return SingleChildScrollView(
+      child: Container(
+        color: AppColors.drawerColor,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Column(
+            children: [
+              SizedBox(height: 30),
+              Text("WeHR", style: AppStyles.styleSemiBold36(context)),
+              SizedBox(height: 50),
+              TabletDrawerBody(),
+            ],
+          ),
         ),
       ),
     );
@@ -122,7 +156,7 @@ class TabletDrawerBody extends StatelessWidget {
             ),
             SizedBox(height: 16),
             SizedBox(
-              height: 200,
+              height: 100,
               child: TabletDrawerListView(items: othersItems),
             ),
           ],

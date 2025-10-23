@@ -6,13 +6,13 @@ import '../utils/app_images.dart';
 import '../utils/app_styles.dart';
 
 class FakeSearchWidget extends StatelessWidget {
-  const FakeSearchWidget({super.key});
-
+  const FakeSearchWidget({super.key, this.width = 343, this.height = 44});
+  final double width, height;
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 343,
-      height: 44,
+      width: width,
+      height: height,
       padding: EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),

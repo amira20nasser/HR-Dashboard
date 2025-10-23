@@ -12,6 +12,7 @@ class ActivityAndScheduleSection extends StatelessWidget {
       children: [
         SizedBox(height: 76),
         ActivitySection(
+          isDesktop: true,
           activity: ActivityEntity(
             numberActivities: 12,
             date: DateTime.now(),

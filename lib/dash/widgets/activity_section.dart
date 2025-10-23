@@ -7,8 +7,13 @@ import 'activity_details.dart';
 import 'activity_header.dart';
 
 class ActivitySection extends StatelessWidget {
-  const ActivitySection({super.key, required this.activity});
+  const ActivitySection({
+    super.key,
+    required this.activity,
+    required this.isDesktop,
+  });
   final ActivityEntity activity;
+  final bool isDesktop;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,38 +34,85 @@ class ActivitySection extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 24.0, right: 16, bottom: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Flexible(
-                  child: Text(
-                    "Today you makes ${activity.numberActivities} Activity",
-                    style: AppStyles.styleMedium14(context),
-                  ),
-                ),
-                FittedBox(
-                  fit: BoxFit.scaleDown,
-                  child: TextButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      backgroundColor: AppColors.primaryColor,
-
-                      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 0),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(3),
-                      ),
-                    ),
-                    child: Text(
-                      "See All Activity",
-                      style: AppStyles.styleMedium14(context),
-                    ),
-                  ),
-                ),
-              ],
+            child: ActionActivitySection(
+              isDesktop: isDesktop,
+              activity: activity,
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class ActionActivitySection extends StatelessWidget {
+  const ActionActivitySection({
+    super.key,
+    required this.isDesktop,
+    required this.activity,
+  });
+  final bool isDesktop;
+  final ActivityEntity activity;
+
+  @override
+  Widget build(BuildContext context) {
+    if (isDesktop) {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Flexible(
+            child: Text(
+              "Today you makes ${activity.numberActivities} Activity",
+              style: AppStyles.styleMedium14(context),
+            ),
+          ),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                backgroundColor: AppColors.primaryColor,
+
+                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadiusGeometry.circular(3),
+                ),
+              ),
+              child: Text(
+                "See All Activity",
+                style: AppStyles.styleMedium14(context),
+              ),
+            ),
+          ),
+        ],
+      );
+    }
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Today you makes ${activity.numberActivities} Activity",
+          style: AppStyles.styleMedium14(context),
+        ),
+        SizedBox(height: 18),
+        TextButton(
+          onPressed: () {},
+          style: TextButton.styleFrom(
+            backgroundColor: AppColors.primaryColor,
+
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusGeometry.circular(3),
+            ),
+          ),
+          child: Text(
+            "See All Activity",
+            style: AppStyles.styleMedium14(context),
+          ),
+        ),
+        SizedBox(height: 18),
+      ],
     );
   }
 }
