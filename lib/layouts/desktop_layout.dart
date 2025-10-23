@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/desktop_bloc_builder.dart';
-import '../widgets/drawer/custom_drawer.dart';
+import '../widgets/drawer/desktop_drawer.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -10,7 +10,7 @@ class DesktopLayout extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          Expanded(flex: 2, child: CustomDrawer()),
+          Expanded(flex: 2, child: DesktopDrawer()),
           SizedBox(width: 50),
           Expanded(flex: 7, child: DesktopLayoutBlocBuilder()),
         ],

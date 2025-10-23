@@ -4,8 +4,8 @@ import '../../utils/app_colors.dart';
 import '../../utils/app_styles.dart';
 import 'drawer_body.dart';
 
-class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({super.key});
+class DesktopDrawer extends StatelessWidget {
+  const DesktopDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
