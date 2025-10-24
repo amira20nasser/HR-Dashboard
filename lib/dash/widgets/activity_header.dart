@@ -15,17 +15,17 @@ class ActivityHeader extends StatelessWidget {
         ),
         color: Color.fromARGB(27, 32, 74, 170),
       ),
-      child: FittedBox(
-        child: Row(
-          children: [
-            Text(
+      child: Row(
+        children: [
+          FittedBox(
+            child: Text(
               "Recently Activity",
               style: AppStyles.styleMedium18(
                 context,
               ).copyWith(color: Colors.white),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

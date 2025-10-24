@@ -9,9 +9,10 @@ class TabletDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        color: AppColors.drawerColor,
+    return Container(
+      color: AppColors.drawerColor,
+      height: double.infinity,
+      child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Column(
