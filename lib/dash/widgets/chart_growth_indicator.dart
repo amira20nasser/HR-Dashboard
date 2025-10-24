@@ -17,7 +17,7 @@ class ChartGrowthIndicator extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
-        const Icon(Icons.arrow_upward, color: AppColors.primaryColor, size: 10),
+        const Icon(Icons.arrow_upward, color: AppColors.primaryColor, size: 18),
       ],
     );
   }

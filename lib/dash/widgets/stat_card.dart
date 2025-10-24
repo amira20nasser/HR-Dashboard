@@ -34,17 +34,15 @@ class StatisticsCard extends StatelessWidget {
             children: [
               StatisticsInfo(title: title, number: number),
               Flexible(
-                child: AspectRatio(
-                  aspectRatio: 8 / 3,
+                child: SizedBox(
+                  height: 80,
+                  width: 100,
                   child: Stack(
-                    clipBehavior: Clip.none,
+                    alignment: Alignment.topCenter,
+                    clipBehavior: Clip.hardEdge,
                     children: [
-                      const Positioned.fill(child: StatisticsChart()),
-                      const Positioned(
-                        top: 15,
-                        right: 100,
-                        child: ChartGrowthIndicator(),
-                      ),
+                      StatisticsChart(),
+                      const Positioned(top: -4, child: ChartGrowthIndicator()),
                     ],
                   ),
                 ),
